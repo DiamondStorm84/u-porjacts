@@ -1,6 +1,8 @@
 #include <iostream>
 #include <cstring>
+//برای گرفتن رشته
 #include <vector>
+// ارایه پرومکس
 using namespace std;
 
 void multiply(char num1[], char num2[]) {
@@ -18,7 +20,7 @@ void multiply(char num1[], char num2[]) {
     int len1 = strlen(num1);
     int len2 = strlen(num2);
     if (len1 == 0 || len2 == 0) {
-        cout << "0" << endl;
+        cout << "0" << '\n';
         return;
     }
 
@@ -30,6 +32,7 @@ void multiply(char num1[], char num2[]) {
     for (int i = len1 - 1; i >= 0; i--) {
         int carry = 0;
         int n1 = num1[i] - '0';
+        //تبدیل رشته به عدد
 
         i_n2 = 0; 
 
@@ -52,7 +55,7 @@ void multiply(char num1[], char num2[]) {
         i--;
 
     if (i == -1) {
-        cout << "0" << endl;
+        cout << "0" << '\n';
         return;
     }
 
@@ -62,7 +65,7 @@ void multiply(char num1[], char num2[]) {
     while (i >= 0) {
         cout << result[i--];
     }
-    cout << endl;
+    cout << '\n';
 }
 
 int main() {
